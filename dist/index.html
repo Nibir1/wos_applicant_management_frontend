@@ -4,6 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/assets/favicon-552158bf.ico" />
+
+    <script type="text/javascript">
+      var pathSegmentsToKeep = 1;
+
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          l.pathname
+            .split("/")
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join("/") +
+          "/?/" +
+          l.pathname
+            .slice(1)
+            .split("/")
+            .slice(pathSegmentsToKeep)
+            .join("/")
+            .replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash
+      );
+    </script>
+
     <title>WOS Applicant Management</title>
 
     <!-- Roboto Font from Google -->
@@ -13,7 +39,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/index-966cb81e.js"></script>
+    <script type="module" crossorigin src="/assets/index-83594cda.js"></script>
     <link rel="stylesheet" href="/assets/index-1b21cbcf.css">
   </head>
   <body>
