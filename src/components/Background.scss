@@ -1,0 +1,32 @@
+#background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1000;
+
+  background: var(--background-strong);
+
+  #background-bl {
+    position: absolute;
+    bottom: -15vh;
+    left: -20vh;
+
+    height: 60vh;
+    aspect-ratio: 1 / 1;
+
+    fill: var(--background-accent);
+  }
+
+  #background-tr {
+    position: absolute;
+    top: -10vh;
+    right: -10vh;
+
+    height: 60vh;
+    aspect-ratio: 1 / 1;
+
+    fill: var(--background-accent);
+  }
+}

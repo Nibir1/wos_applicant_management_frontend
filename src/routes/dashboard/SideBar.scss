@@ -1,0 +1,75 @@
+#sidebar {
+  --text: var(--background);
+  --text-weak: var(--background-weak);
+  --text-weaker: var(--background-weaker);
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  padding: 1rem;
+
+  background: var(--foreground);
+  color: var(--text);
+
+  .wayout-title {
+    margin-bottom: 2rem;
+
+    font-size: 1.25rem;
+  }
+
+  #sidebar-buttons {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    gap: 1rem;
+
+    margin: 2rem 1rem;
+
+    a {
+
+      padding: 0.5em 1em;
+      font-size: 1.25rem;
+      text-align: center;
+      text-decoration: none;
+
+      background: var(--midtone-strong);
+      color: var(--background-weak);
+      border-radius: 0.5em;
+      box-shadow: 0 0.2em 0.5em rgb(0 0 0 / 0.1);
+
+      &::after { display: none; }
+
+      &:hover, &:focus {
+        background: var(--midtone);
+        box-shadow: 0 0.2em 0.5em rgb(0 0 0 / 0.2);
+      }
+
+      &.active {
+        background: var(--background-weak);
+        color: var(--foreground);
+        box-shadow: none;
+      }
+
+      &:active {
+        background: var(--midtone-weak);
+        color: var(--background);
+        box-shadow: 0 0.2em 0.5em rgb(0 0 0 / 0.4);
+      }
+    }
+  }
+
+  .link-logout {
+    margin: 2rem 0;
+    font-size: 1.25rem;
+    color: var(--text-weaker);
+
+    &:hover, &:focus { color: var(--text-weak); }
+    &:active { color: var(--text); }
+  }
+
+  .copyright {
+    font-size: 0.6rem;
+    color: var(--text-weaker);
+  }
+}
