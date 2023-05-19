@@ -1,8 +1,0 @@
-input {
-  font-family: inherit;
-
-  &::placeholder, &::-ms-input-placeholder {
-    color: var(--foreground-weak);
-    opacity: 1;
-  }
-}
