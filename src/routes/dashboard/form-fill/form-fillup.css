@@ -167,7 +167,6 @@
   font-size: 16px;
 
   border: 1px solid #d4d4d4;
-  background: url("src/assets/Search_Icon.png") no-repeat right;
   background-size: 40px;
   background-color: var(--clr-white);
   border-radius: 10px;
