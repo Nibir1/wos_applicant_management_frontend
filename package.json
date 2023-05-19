@@ -2,6 +2,7 @@
   "name": "wos-applicant-management",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://wosamfrontend-production.up.railway.app",
   "type": "module",
   "scripts": {
     "start": "npx http-server ./dist",
