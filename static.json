@@ -1,9 +1,9 @@
 {
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "./dist/index.html"
-      }
-    ]
-  }
-  
+  "cleanUrls": false,
+  "rewrites": [
+    {
+      "source": "**",
+      "destination": "/index.html"
+    }
+  ]
+}
