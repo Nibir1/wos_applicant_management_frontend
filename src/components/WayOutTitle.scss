@@ -1,0 +1,20 @@
+.wayout-title {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  gap: 0.5em;
+
+  .wayout-title-logo {
+    width: 1.5em;
+    height: 1.5em;
+
+    border-radius: 50%;
+    background: green;
+  }
+
+  .wayout-title-text {
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
