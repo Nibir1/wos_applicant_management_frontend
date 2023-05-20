@@ -39,7 +39,10 @@ export default function UserPage() {
       })
       .catch((error) => console.log(error));
 
-    window.location.reload();
+    setTimeout(() => {
+      // code to execute after 3 seconds
+      window.location.reload();
+    }, 3000);
   };
 
   const session = useSession();
@@ -85,7 +88,10 @@ export default function UserPage() {
       })
       .catch((error) => console.log(error));
 
-    window.location.reload();
+    setTimeout(() => {
+      // code to execute after 3 seconds
+      window.location.reload();
+    }, 3000);
   };
 
   // This code can delete a user based on given email address
@@ -111,7 +117,10 @@ export default function UserPage() {
         })
         .catch((error) => console.log(error));
 
-      window.location.reload();
+      setTimeout(() => {
+        // code to execute after 3 seconds
+        window.location.reload();
+      }, 3000);
     }
   };
 
