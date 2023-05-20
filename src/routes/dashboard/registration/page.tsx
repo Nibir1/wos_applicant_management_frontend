@@ -522,7 +522,14 @@ export default function RegistrationPage() {
         </button>
 
         <section className="file-input">
-          <label style={{ color: "brown", fontSize: "15px", width: "255px" }}>
+          <label
+            style={{
+              color: "brown",
+              fontSize: "25px",
+              width: "255px",
+              margin: "10px",
+            }}
+          >
             {waitingMessage}
           </label>
         </section>
