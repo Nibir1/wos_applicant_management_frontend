@@ -5,9 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const dotenv = require("dotenv");
-dotenv.config();
-
 export default function UserSummary() {
   const navigate = useNavigate();
   const session = useSession();

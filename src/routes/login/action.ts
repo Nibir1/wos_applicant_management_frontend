@@ -4,9 +4,6 @@ import type { ActionFunctionArgs } from "react-router-dom";
 import type { LoginFormData, LoginFormResponse } from "./Body";
 import type { OptSessionUser } from "@/session";
 
-const dotenv = require("dotenv");
-dotenv.config();
-
 async function performLogin(
   email: string,
   password: string

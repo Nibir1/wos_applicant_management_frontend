@@ -2,9 +2,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useSession } from "@/session";
 
-const dotenv = require("dotenv");
-dotenv.config();
-
 export default function UserPage() {
   const [file, setFile] = useState<File | any>();
 

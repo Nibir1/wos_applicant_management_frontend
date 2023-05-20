@@ -2,9 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import "./applicant-registration.css";
 
-const dotenv = require("dotenv");
-dotenv.config();
-
 export default function RegistrationPage() {
   const [applicants_name, setApplicants_name] = useState("");
   const [fathers_name, setFathers_name] = useState("");
