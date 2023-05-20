@@ -22,7 +22,7 @@ export default function UserSummary() {
       })
       .catch((error) => console.log(error));
   }, []);
- console.log(`The data is ${data}`);
+
   const handleClick = () => navigate("/dashboard/user");
 
   if (!session) return <div>Error</div>;
