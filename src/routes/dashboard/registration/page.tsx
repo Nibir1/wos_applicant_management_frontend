@@ -102,7 +102,7 @@ export default function RegistrationPage() {
       .catch((error) => console.log(error));
 
     setWaitingMessage(
-      `Please Wait 10 Seconds For The Files To Upload Properly`
+      `-Uploading Files.Please Wait-`
     );
     setTimeout(() => {
       // code to execute after 3 seconds
