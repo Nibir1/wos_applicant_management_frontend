@@ -14,7 +14,7 @@ export default function UserSummary() {
   useEffect(() => {
     axios
       .get(
-        `https://wosambackend-production.up.railway.app/${session?.user?.user_email}`
+        `https://wosambackend-production.up.railway.app/get_specific_user_infos/${session?.user?.user_email}`
       )
       .then((response) => {
         console.log({ response: response });
