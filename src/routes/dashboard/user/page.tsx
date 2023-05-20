@@ -39,7 +39,7 @@ export default function UserPage() {
       })
       .catch((error) => console.log(error));
 
-    window.location.reload();
+    // window.location.reload();
   };
 
   const session = useSession();
