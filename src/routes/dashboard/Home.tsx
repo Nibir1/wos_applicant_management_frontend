@@ -311,7 +311,10 @@ export default function HomePage() {
       })
       .catch((error) => console.log(error));
 
-    window.location.reload();
+    setTimeout(() => {
+      // code to execute after 3 seconds
+      window.location.reload();
+    }, 3000);
   };
 
   return (
