@@ -13,19 +13,28 @@ export default function RegistrationPage() {
   const [fathers_date_of_birth, setFathers_date_of_birth] = useState("");
   const [mothers_date_of_birth, setMothers_date_of_birth] = useState("");
   const [admission_date, setAdmission_date] = useState("");
-  const [applicants_personal_email, setApplicants_personal_email] = useState("");
-  const [email_by_WOS_for_applicant, setEmail_by_WOS_for_applicant] = useState("");
+  const [applicants_personal_email, setApplicants_personal_email] =
+    useState("");
+  const [email_by_WOS_for_applicant, setEmail_by_WOS_for_applicant] =
+    useState("");
   const [applicants_home_address, setApplicants_home_address] = useState("");
-  const [applicants_messenger_link, setApplicants_messenger_link] = useState("");
+  const [applicants_messenger_link, setApplicants_messenger_link] =
+    useState("");
   const [applicants_profession, setApplicants_profession] = useState("");
   const [visa_status, setVisa_status] = useState("");
   const [country_of_choice, setCountry_of_choice] = useState("");
   const [applicants_photo, setApplicants_photo] = useState<File | any>();
   const [passport, setPassport] = useState<File | any>();
-  const [NID_Birth_Certificate, setNID_Birth_Certificate] = useState<File | any>();
+  const [NID_Birth_Certificate, setNID_Birth_Certificate] = useState<
+    File | any
+  >();
   const [applicants_cv, setApplicants_cv] = useState<File | any>();
-  const [recommendation_letter_1, setRecommendation_letter_1] = useState<File | any>();
-  const [recommendation_letter_2, setRecommendation_letter_2] = useState<File | any>();
+  const [recommendation_letter_1, setRecommendation_letter_1] = useState<
+    File | any
+  >();
+  const [recommendation_letter_2, setRecommendation_letter_2] = useState<
+    File | any
+  >();
   const [SSc_transcript, setSSc_transcript] = useState<File | any>();
   const [SSc_certificate, setSSc_certificate] = useState<File | any>();
   const [HSc_transcript, setHSc_transcript] = useState<File | any>();
@@ -105,6 +114,7 @@ export default function RegistrationPage() {
           <label>Applicant's Name</label>
           <input
             type="text"
+            required
             value={applicants_name}
             onChange={(e) => setApplicants_name(e.target.value)}
           />
@@ -114,6 +124,7 @@ export default function RegistrationPage() {
           <label>Father's Name</label>
           <input
             type="text"
+            required
             value={fathers_name}
             onChange={(e) => setFathers_name(e.target.value)}
           />
@@ -123,6 +134,7 @@ export default function RegistrationPage() {
           <label>Mother's Name</label>
           <input
             type="text"
+            required
             value={mothers_name}
             onChange={(e) => setMothers_name(e.target.value)}
           />
@@ -132,6 +144,7 @@ export default function RegistrationPage() {
           <label>Applicant's Phone Number</label>
           <input
             type="text"
+            required
             value={applicants_Phone_Number}
             onChange={(e) => setApplicants_Phone_Number(e.target.value)}
           />
@@ -141,6 +154,7 @@ export default function RegistrationPage() {
           <label>Father's Phone Number</label>
           <input
             type="text"
+            required
             value={fathers_Phone_Number}
             onChange={(e) => setFathers_Phone_Number(e.target.value)}
           />
@@ -150,6 +164,7 @@ export default function RegistrationPage() {
           <label>Mother's Phone Number</label>
           <input
             type="text"
+            required
             value={mothers_Phone_Number}
             onChange={(e) => setMothers_Phone_Number(e.target.value)}
           />
@@ -159,6 +174,7 @@ export default function RegistrationPage() {
           <label>Applicant's Date of Birth</label>
           <input
             type="text"
+            required
             value={applicants_date_of_birth}
             onChange={(e) => setApplicants_date_of_birth(e.target.value)}
           />
@@ -168,6 +184,7 @@ export default function RegistrationPage() {
           <label>Father's Date of Birth</label>
           <input
             type="text"
+            required
             value={fathers_date_of_birth}
             onChange={(e) => setFathers_date_of_birth(e.target.value)}
           />
@@ -177,6 +194,7 @@ export default function RegistrationPage() {
           <label>Mother's Date of Birth</label>
           <input
             type="text"
+            required
             value={mothers_date_of_birth}
             onChange={(e) => setMothers_date_of_birth(e.target.value)}
           />
@@ -186,6 +204,7 @@ export default function RegistrationPage() {
           <label>Admission Date</label>
           <input
             type="text"
+            required
             value={admission_date}
             onChange={(e) => setAdmission_date(e.target.value)}
           />
@@ -214,6 +233,7 @@ export default function RegistrationPage() {
           <label>Applicant's Home Address</label>
           <input
             type="text"
+            required
             value={applicants_home_address}
             onChange={(e) => setApplicants_home_address(e.target.value)}
           />
@@ -232,6 +252,7 @@ export default function RegistrationPage() {
           <label>Applicant's Profession</label>
           <input
             type="text"
+            required
             value={applicants_profession}
             onChange={(e) => setApplicants_profession(e.target.value)}
           />
@@ -241,6 +262,7 @@ export default function RegistrationPage() {
           <label>Visa Status</label>
           <select
             name="visa_status"
+            required
             value={visa_status}
             onChange={(e) => setVisa_status(e.target.value)}
           >
@@ -254,6 +276,7 @@ export default function RegistrationPage() {
           <label>Country of Choice</label>
           <input
             type="text"
+            required
             id="country_of_choice"
             value={country_of_choice}
             onChange={(e) => setCountry_of_choice(e.target.value)}
@@ -264,6 +287,7 @@ export default function RegistrationPage() {
           <label>Applicant's Photo</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -278,6 +302,7 @@ export default function RegistrationPage() {
           <label>Passport</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -292,6 +317,7 @@ export default function RegistrationPage() {
           <label>NID / Birth Certificate</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -306,6 +332,7 @@ export default function RegistrationPage() {
           <label>Applicant's CV</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -320,6 +347,7 @@ export default function RegistrationPage() {
           <label>Recommendation Letter 1</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -334,6 +362,7 @@ export default function RegistrationPage() {
           <label>Recommendation Letter 2</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -348,6 +377,7 @@ export default function RegistrationPage() {
           <label>SSc Transcript</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -362,6 +392,7 @@ export default function RegistrationPage() {
           <label>SSc Certificate</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -376,6 +407,7 @@ export default function RegistrationPage() {
           <label>HSc Transcript</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -390,6 +422,7 @@ export default function RegistrationPage() {
           <label>HSc Certificate</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -404,6 +437,7 @@ export default function RegistrationPage() {
           <label>BSc Transcript</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -418,6 +452,7 @@ export default function RegistrationPage() {
           <label>BSc Certificate</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -432,6 +467,7 @@ export default function RegistrationPage() {
           <label>MSc Transcript</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -446,6 +482,7 @@ export default function RegistrationPage() {
           <label>MSc Certificate</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
@@ -460,6 +497,7 @@ export default function RegistrationPage() {
           <label>English Certificate</label>
           <input
             type="file"
+            required
             onChange={(e) => {
               const files = e.target.files;
               if (files && files.length > 0) {
