@@ -617,6 +617,7 @@ export default function HomePage() {
             <label>Applicant's Name</label>
             <input
               type="text"
+              required
               value={applicants_name}
               onChange={(e) => setApplicants_name(e.target.value)}
             />
@@ -626,6 +627,7 @@ export default function HomePage() {
             <label>Father's Name</label>
             <input
               type="text"
+              required
               value={fathers_name}
               onChange={(e) => setFathers_name(e.target.value)}
             />
@@ -635,6 +637,7 @@ export default function HomePage() {
             <label>Mother's Name</label>
             <input
               type="text"
+              required
               value={mothers_name}
               onChange={(e) => setMothers_name(e.target.value)}
             />
@@ -644,6 +647,7 @@ export default function HomePage() {
             <label>Applicant's Phone Number</label>
             <input
               type="text"
+              required
               value={applicants_Phone_Number}
               onChange={(e) => setApplicants_Phone_Number(e.target.value)}
             />
@@ -653,6 +657,7 @@ export default function HomePage() {
             <label>Father's Phone Number</label>
             <input
               type="text"
+              required
               value={fathers_Phone_Number}
               onChange={(e) => setFathers_Phone_Number(e.target.value)}
             />
@@ -662,6 +667,7 @@ export default function HomePage() {
             <label>Mother's Phone Number</label>
             <input
               type="text"
+              required
               value={mothers_Phone_Number}
               onChange={(e) => setMothers_Phone_Number(e.target.value)}
             />
@@ -671,6 +677,7 @@ export default function HomePage() {
             <label>Applicant's Date of Birth</label>
             <input
               type="text"
+              required
               value={applicants_date_of_birth}
               onChange={(e) => setApplicants_date_of_birth(e.target.value)}
             />
@@ -680,6 +687,7 @@ export default function HomePage() {
             <label>Father's Date of Birth</label>
             <input
               type="text"
+              required
               value={fathers_date_of_birth}
               onChange={(e) => setFathers_date_of_birth(e.target.value)}
             />
@@ -689,6 +697,7 @@ export default function HomePage() {
             <label>Mother's Date of Birth</label>
             <input
               type="text"
+              required
               value={mothers_date_of_birth}
               onChange={(e) => setMothers_date_of_birth(e.target.value)}
             />
@@ -698,6 +707,7 @@ export default function HomePage() {
             <label>Admission Date</label>
             <input
               type="text"
+              required
               value={admission_date}
               onChange={(e) => setAdmission_date(e.target.value)}
             />
@@ -707,6 +717,7 @@ export default function HomePage() {
             <label>Email by WOS for Applicant</label>
             <input
               type="text"
+              required
               value={email_by_WOS_for_applicant}
               onChange={(e) => setEmail_by_WOS_for_applicant(e.target.value)}
             />
@@ -716,6 +727,7 @@ export default function HomePage() {
             <label>Applicant's Home Address</label>
             <input
               type="text"
+              required
               value={applicants_home_address}
               onChange={(e) => setApplicants_home_address(e.target.value)}
             />
@@ -725,6 +737,7 @@ export default function HomePage() {
             <label>Applicant's Messenger Link</label>
             <input
               type="text"
+              required
               value={applicants_messenger_link}
               onChange={(e) => setApplicants_messenger_link(e.target.value)}
             />
@@ -734,6 +747,7 @@ export default function HomePage() {
             <label>Applicant's Profession</label>
             <input
               type="text"
+              required
               value={applicants_profession}
               onChange={(e) => setApplicants_profession(e.target.value)}
             />
@@ -743,6 +757,7 @@ export default function HomePage() {
             <label>Paid I20 Amount</label>
             <input
               type="text"
+              required
               value={paid_i20_amount}
               onChange={(e) => setPaid_i20_amount(e.target.value)}
             />
@@ -752,6 +767,7 @@ export default function HomePage() {
             <label>Paid SEVIS Amount</label>
             <input
               type="text"
+              required
               value={paid_sevis_amount}
               onChange={(e) => setPaid_sevis_amount(e.target.value)}
             />
@@ -761,6 +777,7 @@ export default function HomePage() {
             <label>Paid After VISA Amount</label>
             <input
               type="text"
+              required
               value={paid_after_visa_amount}
               onChange={(e) => setPaid_after_visa_amount(e.target.value)}
             />
@@ -770,6 +787,7 @@ export default function HomePage() {
             <label>I20 Payment Status</label>
             <select
               name="I20 Payment Status"
+              required
               value={i20_payment_status}
               onChange={(e) => seti20_payment_status(e.target.value)}
             >
@@ -783,6 +801,7 @@ export default function HomePage() {
             <label>SEVIS Payment Status</label>
             <select
               name="SEVIS Payment Status"
+              required
               value={sevis_payment_status}
               onChange={(e) => setSevis_payment_status(e.target.value)}
             >
@@ -796,6 +815,7 @@ export default function HomePage() {
             <label>After VISA Payment Status</label>
             <select
               name="After VISA Payment Status"
+              required
               value={after_visa_payment_status}
               onChange={(e) => setAfter_visa_payment_status(e.target.value)}
             >
@@ -809,6 +829,7 @@ export default function HomePage() {
             <label>Visa Status</label>
             <select
               name="visa_status"
+              required
               value={visa_status}
               onChange={(e) => setVisa_status(e.target.value)}
             >
@@ -822,7 +843,7 @@ export default function HomePage() {
             <label>Country of Choice</label>
             <input
               type="text"
-              id="country_of_choice"
+              required
               value={country_of_choice}
               onChange={(e) => setCountry_of_choice(e.target.value)}
             />
@@ -832,6 +853,7 @@ export default function HomePage() {
             <label>Applicant's Photo</label>
             <input
               type="file"
+              required
               // onChange={(e) => setApplicants_photo(e.target.files[0])}
               onChange={(e) => {
                 const files = e.target.files;
@@ -847,6 +869,7 @@ export default function HomePage() {
             <label>Passport</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -861,6 +884,7 @@ export default function HomePage() {
             <label>NID / Birth Certificate</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -875,6 +899,7 @@ export default function HomePage() {
             <label>Applicant's CV</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -889,6 +914,7 @@ export default function HomePage() {
             <label>Recommendation Letter 1</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -903,6 +929,7 @@ export default function HomePage() {
             <label>Recommendation Letter 2</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -917,6 +944,7 @@ export default function HomePage() {
             <label>SSc Transcript</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -931,6 +959,7 @@ export default function HomePage() {
             <label>SSc Certificate</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -945,6 +974,7 @@ export default function HomePage() {
             <label>HSc Transcript</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -959,6 +989,7 @@ export default function HomePage() {
             <label>HSc Certificate</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -973,6 +1004,7 @@ export default function HomePage() {
             <label>BSc Transcript</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -987,6 +1019,7 @@ export default function HomePage() {
             <label>BSc Certificate</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -1001,6 +1034,7 @@ export default function HomePage() {
             <label>MSc Transcript</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -1015,6 +1049,7 @@ export default function HomePage() {
             <label>MSc Certificate</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
@@ -1029,6 +1064,7 @@ export default function HomePage() {
             <label>English Certificate</label>
             <input
               type="file"
+              required
               onChange={(e) => {
                 const files = e.target.files;
                 if (files && files.length > 0) {
