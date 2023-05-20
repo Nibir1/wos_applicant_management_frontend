@@ -526,7 +526,7 @@ export default function RegistrationPage() {
             style={{
               color: "brown",
               fontSize: "25px",
-              width: "255px",
+              width: "300px",
               margin: "10px",
             }}
           >
