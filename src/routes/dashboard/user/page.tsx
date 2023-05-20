@@ -42,7 +42,7 @@ export default function UserPage() {
     setTimeout(() => {
       // code to execute after 3 seconds
       window.location.reload();
-    }, 3000);
+    }, 6000);
   };
 
   const session = useSession();
