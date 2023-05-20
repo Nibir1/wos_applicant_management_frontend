@@ -10,7 +10,7 @@ async function performLogin(
 ): Promise<OptSessionUser> {
   try {
     const response = await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/get_user_infos`
+      `https://wosambackend-production.up.railway.app/get_user_infos`
     );
     const user_infos = await response.json();
 
