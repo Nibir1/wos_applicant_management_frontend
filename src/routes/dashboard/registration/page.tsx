@@ -526,8 +526,8 @@ export default function RegistrationPage() {
             style={{
               color: "brown",
               fontSize: "25px",
-              width: "300px",
-              margin: "10px",
+              width: "350px",
+              margin: "25px",
             }}
           >
             {waitingMessage}
