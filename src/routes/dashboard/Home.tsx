@@ -273,12 +273,12 @@ export default function HomePage() {
       })
       .catch((error) => console.log(error));
 
-    setWaitingMessage(`-Uploading Files.Please Wait-`);
+    setWaitingMessage(`-Updating Files.Please Wait-`);
 
     setTimeout(() => {
       // code to execute after 3 seconds
       window.location.reload();
-    }, 20000);
+    }, 30000);
   };
 
   // This code deletes an applicant from applicants and also deletes his ds160 informations
