@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useSession } from "@/session";
 
+const dotenv = require("dotenv");
+dotenv.config();
+
 export default function UserPage() {
   const [file, setFile] = useState<File | any>();
 
@@ -26,10 +29,7 @@ export default function UserPage() {
     formData.append("user_image", file);
 
     axios
-      .post(
-        "https://wosambackend-production.up.railway.app/insert_user_infos",
-        formData
-      )
+      .post(`${process.env.REACT_APP_BACKEND_URL}/insert_user_infos`, formData)
       .then((response) => {
         if (response.data.Status === "Success") {
           console.log("Succeded");
@@ -49,7 +49,7 @@ export default function UserPage() {
   useEffect(() => {
     axios
       .get(
-        `https://wosambackend-production.up.railway.app/get_specific_user_infos/${session?.user?.user_email}`
+        `${process.env.REACT_APP_BACKEND_URL}/get_specific_user_infos/${session?.user?.user_email}`
       )
       .then((response) => {
         console.log({ response: response });
@@ -73,7 +73,7 @@ export default function UserPage() {
 
     axios
       .put(
-        `https://wosambackend-production.up.railway.app/update_user_infos/${session?.user?.user_email}`,
+        `${process.env.REACT_APP_BACKEND_URL}/update_user_infos/${session?.user?.user_email}`,
         formData
       )
       .then((response) => {
@@ -100,7 +100,7 @@ export default function UserPage() {
     } else {
       axios
         .delete(
-          `https://wosambackend-production.up.railway.app/${userToDelete}`
+          `${process.env.REACT_APP_BACKEND_URL}/delete_user/${userToDelete}`
         )
         .then((response) => {
           if (response.data.Status === "Success") {

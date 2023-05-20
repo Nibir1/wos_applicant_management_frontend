@@ -4,13 +4,16 @@ import type { ActionFunctionArgs } from "react-router-dom";
 import type { LoginFormData, LoginFormResponse } from "./Body";
 import type { OptSessionUser } from "@/session";
 
+const dotenv = require("dotenv");
+dotenv.config();
+
 async function performLogin(
   email: string,
   password: string
 ): Promise<OptSessionUser> {
   try {
     const response = await fetch(
-      "https://wosambackend-production.up.railway.app/get_user_infos"
+      `${process.env.REACT_APP_BACKEND_URL}/get_user_infos`
     );
     const user_infos = await response.json();
 

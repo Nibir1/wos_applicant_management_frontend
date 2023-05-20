@@ -3,6 +3,9 @@ import axios from "axios";
 
 import "./form-fillup.css";
 
+const dotenv = require("dotenv");
+dotenv.config();
+
 export default function FormFillPage() {
   const [
     applicants_personal_email_Address,
@@ -258,10 +261,7 @@ export default function FormFillPage() {
     formData.append("street_address", street_address);
 
     axios
-      .post(
-        "https://wosambackend-production.up.railway.app/insert_ds160_infos",
-        formData
-      )
+      .post(`${process.env.REACT_APP_BACKEND_URL}/insert_ds160_infos`, formData)
       .then((response) => {
         if (response.data.Status === "Success") {
           console.log("Succeded");

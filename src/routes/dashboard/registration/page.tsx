@@ -2,6 +2,9 @@ import { useState } from "react";
 import axios from "axios";
 import "./applicant-registration.css";
 
+const dotenv = require("dotenv");
+dotenv.config();
+
 export default function RegistrationPage() {
   const [applicants_name, setApplicants_name] = useState("");
   const [fathers_name, setFathers_name] = useState("");
@@ -87,7 +90,7 @@ export default function RegistrationPage() {
 
     axios
       .post(
-        "https://wosambackend-production.up.railway.app/insert_applicant_infos",
+        `${process.env.REACT_APP_BACKEND_URL}/insert_applicant_infos`,
         formData
       )
       .then((response) => {
