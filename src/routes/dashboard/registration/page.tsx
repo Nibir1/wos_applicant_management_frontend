@@ -87,7 +87,7 @@ export default function RegistrationPage() {
 
     axios
       .post(
-        `${process.env.REACT_APP_BACKEND_URL}/insert_applicant_infos`,
+        `https://wosambackend-production.up.railway.app/insert_applicant_infos`,
         formData
       )
       .then((response) => {

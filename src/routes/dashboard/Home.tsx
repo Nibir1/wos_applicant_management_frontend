@@ -96,7 +96,7 @@ export default function HomePage() {
     e.preventDefault();
     axios
       .get(
-        `${process.env.REACT_APP_BACKEND_URL}/get_specific_applicant_infos/${applicant_email}`
+        `https://wosambackend-production.up.railway.app/get_specific_applicant_infos/${applicant_email}`
       )
       .then((response) => {
         console.log({ response: response });
@@ -111,7 +111,7 @@ export default function HomePage() {
     // This is to get the ds160 informations
     axios
       .get(
-        `${process.env.REACT_APP_BACKEND_URL}/get_ds160_infos/${applicant_email}`
+        `https://wosambackend-production.up.railway.app/get_ds160_infos/${applicant_email}`
       )
       .then((response) => {
         console.log({ response: response });
@@ -259,7 +259,7 @@ export default function HomePage() {
 
     axios
       .put(
-        `${process.env.REACT_APP_BACKEND_URL}/update_applicant_infos/${applicant_email}`,
+        `https://wosambackend-production.up.railway.app/update_applicant_infos/${applicant_email}`,
         formData
       )
       .then((response) => {
@@ -282,7 +282,7 @@ export default function HomePage() {
 
     axios
       .delete(
-        `${process.env.REACT_APP_BACKEND_URL}/delete_applicant_from_applicants/${applicant_email}`
+        `https://wosambackend-production.up.railway.app/delete_applicant_from_applicants/${applicant_email}`
       )
       .then((response) => {
         if (response.data.Status === "Success") {
@@ -295,7 +295,7 @@ export default function HomePage() {
 
     axios
       .delete(
-        `${process.env.REACT_APP_BACKEND_URL}/delete_applicants_ds160_informations/${applicant_email}`
+        `https://wosambackend-production.up.railway.app/delete_applicants_ds160_informations/${applicant_email}`
       )
       .then((response) => {
         if (response.data.Status === "Success") {
@@ -343,7 +343,7 @@ export default function HomePage() {
           <h1 style={{ textAlign: "center" }}>Applican'ts Photo</h1>
           <img
             src={
-              `${process.env.REACT_APP_BACKEND_URL}/images/` +
+              `https://wosambackend-production.up.railway.app/images/` +
               data.applicants_photo
             }
             style={{ width: "200px", height: "200px" }}
@@ -353,7 +353,7 @@ export default function HomePage() {
             style={{ backgroundColor: "#484b4f" }}
             onClick={() =>
               handleDownload(
-                `${process.env.REACT_APP_BACKEND_URL}/images/` +
+                `https://wosambackend-production.up.railway.app/images/` +
                   data.applicants_photo
               )
             }
@@ -584,7 +584,8 @@ export default function HomePage() {
             <>
               <Viewer
                 fileUrl={
-                  `${process.env.REACT_APP_BACKEND_URL}/images/` + viewPdf
+                  `https://wosambackend-production.up.railway.app/images/` +
+                  viewPdf
                 }
                 plugins={[newPlugin]}
               />

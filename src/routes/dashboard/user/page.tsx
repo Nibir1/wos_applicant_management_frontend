@@ -26,7 +26,10 @@ export default function UserPage() {
     formData.append("user_image", file);
 
     axios
-      .post(`${process.env.REACT_APP_BACKEND_URL}/insert_user_infos`, formData)
+      .post(
+        `https://wosambackend-production.up.railway.app/insert_user_infos`,
+        formData
+      )
       .then((response) => {
         if (response.data.Status === "Success") {
           console.log("Succeded");
@@ -46,7 +49,7 @@ export default function UserPage() {
   useEffect(() => {
     axios
       .get(
-        `${process.env.REACT_APP_BACKEND_URL}/get_specific_user_infos/${session?.user?.user_email}`
+        `https://wosambackend-production.up.railway.app/get_specific_user_infos/${session?.user?.user_email}`
       )
       .then((response) => {
         console.log({ response: response });
@@ -70,7 +73,7 @@ export default function UserPage() {
 
     axios
       .put(
-        `${process.env.REACT_APP_BACKEND_URL}/update_user_infos/${session?.user?.user_email}`,
+        `https://wosambackend-production.up.railway.app/update_user_infos/${session?.user?.user_email}`,
         formData
       )
       .then((response) => {
@@ -97,7 +100,7 @@ export default function UserPage() {
     } else {
       axios
         .delete(
-          `${process.env.REACT_APP_BACKEND_URL}/delete_user/${userToDelete}`
+          `https://wosambackend-production.up.railway.app/delete_user/${userToDelete}`
         )
         .then((response) => {
           if (response.data.Status === "Success") {

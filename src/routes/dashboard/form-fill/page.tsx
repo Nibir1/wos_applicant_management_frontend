@@ -258,7 +258,10 @@ export default function FormFillPage() {
     formData.append("street_address", street_address);
 
     axios
-      .post(`${process.env.REACT_APP_BACKEND_URL}/insert_ds160_infos`, formData)
+      .post(
+        `https://wosambackend-production.up.railway.app/insert_ds160_infos`,
+        formData
+      )
       .then((response) => {
         if (response.data.Status === "Success") {
           console.log("Succeded");
