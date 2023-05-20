@@ -107,7 +107,7 @@ export default function RegistrationPage() {
     setTimeout(() => {
       // code to execute after 3 seconds
       window.location.reload();
-    }, 10000);
+    }, 20000);
   };
 
   return (
@@ -522,7 +522,7 @@ export default function RegistrationPage() {
         </button>
 
         <section className="file-input">
-          <label>{waitingMessage}</label>
+          <label style={{ color: "brown", fontSize: "50px" }}>{waitingMessage}</label>
         </section>
       </form>
     </div>
