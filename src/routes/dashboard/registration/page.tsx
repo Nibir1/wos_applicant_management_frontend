@@ -87,7 +87,7 @@ export default function RegistrationPage() {
 
     axios
       .post(
-        `https://wosambackend-production.up.railway.app/insert_applicant_infos`,
+        `https://wosambackend-production.up.railway.app/applicants/insert_applicant_infos`,
         formData
       )
       .then((response) => {
