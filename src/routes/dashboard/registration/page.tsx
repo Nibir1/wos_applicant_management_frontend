@@ -107,7 +107,7 @@ export default function RegistrationPage() {
     setTimeout(() => {
       // code to execute after 3 seconds
       window.location.reload();
-    }, 20000);
+    }, 30000);
   };
 
   return (
