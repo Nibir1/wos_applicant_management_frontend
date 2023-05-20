@@ -27,7 +27,7 @@ export default function UserPage() {
 
     axios
       .post(
-        `https://wosambackend-production.up.railway.app/insert_user_infos`,
+        `https://wosambackend-production.up.railway.app/authorized_users/insert_user_infos`,
         formData
       )
       .then((response) => {
