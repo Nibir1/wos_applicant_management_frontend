@@ -85,6 +85,8 @@ export default function HomePage() {
   const [MSc_certificate, setMSc_certificate] = useState<File | any>();
   const [english_certificate, setEnglish_certificate] = useState<File | any>();
 
+  const [waitingMessage, setWaitingMessage] = useState("");
+
   // This code can fetch specific applicant's informations from database and show where we want
   const [message, setMessage] = useState("");
   const [data, setData] = useState<any>("initial state");
@@ -270,10 +272,13 @@ export default function HomePage() {
         }
       })
       .catch((error) => console.log(error));
+
+    setWaitingMessage(`-Uploading Files.Please Wait-`);
+
     setTimeout(() => {
       // code to execute after 3 seconds
       window.location.reload();
-    }, 3000);
+    }, 20000);
   };
 
   // This code deletes an applicant from applicants and also deletes his ds160 informations
@@ -1037,6 +1042,19 @@ export default function HomePage() {
           >
             Update Applicant
           </button>
+
+          <section className="file-input">
+            <label
+              style={{
+                color: "brown",
+                fontSize: "25px",
+                width: "350px",
+                margin: "25px",
+              }}
+            >
+              {waitingMessage}
+            </label>
+          </section>
         </form>
       </section>
 
