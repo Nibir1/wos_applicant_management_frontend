@@ -84,7 +84,7 @@ export default function RegistrationPage() {
     formData.append("MSc_transcript", MSc_transcript);
     formData.append("MSc_certificate", MSc_certificate);
     formData.append("english_certificate", english_certificate);
-
+    console.log(formData);
     axios
       .post(
         `https://wosambackend-production.up.railway.app/applicants/insert_applicant_infos`,
