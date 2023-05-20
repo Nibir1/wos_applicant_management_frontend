@@ -18,7 +18,7 @@ export default function UserSummary() {
       )
       .then((response) => {
         console.log({ response: response });
-        setData(response.data.rows[0].user_image);
+        setData(response.data[0].user_image);
       })
       .catch((error) => console.log(error));
   }, []);
