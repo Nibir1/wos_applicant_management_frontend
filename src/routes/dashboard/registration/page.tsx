@@ -13,28 +13,19 @@ export default function RegistrationPage() {
   const [fathers_date_of_birth, setFathers_date_of_birth] = useState("");
   const [mothers_date_of_birth, setMothers_date_of_birth] = useState("");
   const [admission_date, setAdmission_date] = useState("");
-  const [applicants_personal_email, setApplicants_personal_email] =
-    useState("");
-  const [email_by_WOS_for_applicant, setEmail_by_WOS_for_applicant] =
-    useState("");
+  const [applicants_personal_email, setApplicants_personal_email] = useState("");
+  const [email_by_WOS_for_applicant, setEmail_by_WOS_for_applicant] = useState("");
   const [applicants_home_address, setApplicants_home_address] = useState("");
-  const [applicants_messenger_link, setApplicants_messenger_link] =
-    useState("");
+  const [applicants_messenger_link, setApplicants_messenger_link] = useState("");
   const [applicants_profession, setApplicants_profession] = useState("");
   const [visa_status, setVisa_status] = useState("");
   const [country_of_choice, setCountry_of_choice] = useState("");
   const [applicants_photo, setApplicants_photo] = useState<File | any>();
   const [passport, setPassport] = useState<File | any>();
-  const [NID_Birth_Certificate, setNID_Birth_Certificate] = useState<
-    File | any
-  >();
+  const [NID_Birth_Certificate, setNID_Birth_Certificate] = useState<File | any>();
   const [applicants_cv, setApplicants_cv] = useState<File | any>();
-  const [recommendation_letter_1, setRecommendation_letter_1] = useState<
-    File | any
-  >();
-  const [recommendation_letter_2, setRecommendation_letter_2] = useState<
-    File | any
-  >();
+  const [recommendation_letter_1, setRecommendation_letter_1] = useState<File | any>();
+  const [recommendation_letter_2, setRecommendation_letter_2] = useState<File | any>();
   const [SSc_transcript, setSSc_transcript] = useState<File | any>();
   const [SSc_certificate, setSSc_certificate] = useState<File | any>();
   const [HSc_transcript, setHSc_transcript] = useState<File | any>();
@@ -101,7 +92,7 @@ export default function RegistrationPage() {
     setTimeout(() => {
       // code to execute after 3 seconds
       window.location.reload();
-    }, 8000);
+    }, 3000);
   };
 
   return (
