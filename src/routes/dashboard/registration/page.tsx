@@ -85,41 +85,6 @@ export default function RegistrationPage() {
     formData.append("MSc_certificate", MSc_certificate);
     formData.append("english_certificate", english_certificate);
 
-    // -----------------------------------------------------------------
-    console.log(`applicants_name ${applicants_name}`);
-    console.log(`fathers_name ${fathers_name}`);
-    console.log(`mothers_name ${mothers_name}`);
-    console.log(`applicants_Phone_Number ${applicants_Phone_Number}`);
-    console.log(`fathers_Phone_Number ${fathers_Phone_Number}`);
-    console.log(`mothers_Phone_Number ${mothers_Phone_Number}`);
-    console.log(`applicants_date_of_birth ${applicants_date_of_birth}`);
-    console.log(`fathers_date_of_birth ${fathers_date_of_birth}`);
-    console.log(`mothers_date_of_birth ${mothers_date_of_birth}`);
-    console.log(`admission_date ${admission_date}`);
-    console.log(`applicants_personal_email ${applicants_personal_email}`);
-    console.log(`email_by_WOS_for_applicant ${email_by_WOS_for_applicant}`);
-    console.log(`applicants_home_address ${applicants_home_address}`);
-    console.log(`applicants_messenger_link ${applicants_messenger_link}`);
-    console.log(`applicants_profession ${applicants_profession}`);
-    console.log(`visa_status ${visa_status}`);
-    console.log(`country_of_choice ${country_of_choice}`);
-    console.log(`applicants_photo ${applicants_photo}`);
-    console.log(`passport ${passport}`);
-    console.log(`NID_Birth_Certificate ${NID_Birth_Certificate}`);
-    console.log(`applicants_cv ${applicants_cv}`);
-    console.log(`recommendation_letter_1 ${recommendation_letter_1}`);
-    console.log(`recommendation_letter_2 ${recommendation_letter_2}`);
-    console.log(`SSc_transcript ${SSc_transcript}`);
-    console.log(`SSc_certificate ${SSc_certificate}`);
-    console.log(`HSc_transcript ${HSc_transcript}`);
-    console.log(`HSc_certificate ${HSc_certificate}`);
-    console.log(`BSc_transcript ${BSc_transcript}`);
-    console.log(`BSc_certificate ${BSc_certificate}`);
-    console.log(`MSc_transcript ${MSc_transcript}`);
-    console.log(`MSc_certificate ${MSc_certificate}`);
-    console.log(`english_certificate ${english_certificate}`);
-    // -----------------------------------------------------------------
-
     axios
       .post(
         `https://wosambackend-production.up.railway.app/applicants/insert_applicant_infos`,
@@ -133,10 +98,10 @@ export default function RegistrationPage() {
         }
       })
       .catch((error) => console.log(error));
-    // setTimeout(() => {
-    //   // code to execute after 3 seconds
-    //   window.location.reload();
-    // }, 3000);
+    setTimeout(() => {
+      // code to execute after 3 seconds
+      window.location.reload();
+    }, 10000);
   };
 
   return (
