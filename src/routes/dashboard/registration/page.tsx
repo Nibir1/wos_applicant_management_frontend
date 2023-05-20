@@ -45,6 +45,8 @@ export default function RegistrationPage() {
   const [MSc_certificate, setMSc_certificate] = useState<File | any>();
   const [english_certificate, setEnglish_certificate] = useState<File | any>();
 
+  const [waitingMessage, setWaitingMessage] = useState("");
+
   /** This function is responsible to take the applicants informations
    *  and store them into applicants table to create a new applicant
    */
@@ -98,6 +100,10 @@ export default function RegistrationPage() {
         }
       })
       .catch((error) => console.log(error));
+
+    setWaitingMessage(
+      `Please Wait 10 Seconds For The Files To Upload Properly`
+    );
     setTimeout(() => {
       // code to execute after 3 seconds
       window.location.reload();
@@ -514,6 +520,10 @@ export default function RegistrationPage() {
         >
           Register Applicant
         </button>
+
+        <section className="file-input">
+          <label>{waitingMessage}</label>
+        </section>
       </form>
     </div>
   );
